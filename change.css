@@ -1,0 +1,108 @@
+.row {
+    height: 3000px;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+#house {
+    height: 500px;
+    width: 700px;
+    border: 1px solid gray;
+    margin: auto;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+#roof {
+    height: calc(1/10 * 500px);
+    width: calc(700px + (1/5 * 700px));
+    border: 1px solid gray;
+    background-color: gray;
+    display: flex;
+    border-top-width: 25px;
+}
+
+#window:nth-of-type(odd) {
+    height: calc(1/2 * 500px);
+    display: inline-block;
+    width: calc(1/2 * 700px);
+    overflow: hidden;
+    border: 4px solid gray;
+    border-bottom: 20px solid white;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin: 45px;
+    -webkit-animation: bgcolorchange 10s infinite;
+    animation: bgcolorchange 10s infinite;
+}
+
+#window:nth-of-type(even) {
+    height: calc(2/3 * 500px);
+    width: calc(1/4 * 700px);
+    display: inline-block;
+    overflow: hidden;
+    border: 10px solid gray;
+    border-bottom: 15px solid rgb(43, 42, 42);
+    margin-top: 35px;
+    margin-left: 50px;
+}
+
+#knob{
+    height: 25px;
+    width: 15px;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: 12px;
+    margin-top: 90px;
+}
+
+#glass {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border: 1px solid white;
+    margin-left: 10px;
+    margin-top: 5px;
+    -webkit-animation: bgcolorchange 10s infinite;
+    animation: bgcolorchange 10s infinite;
+}
+
+@-webkit-keyframes bgcolorchange {
+    0% {
+        background: yellow;
+        border: yellow;
+    }
+    25% {
+        background: gold;
+        border: gold;
+    }
+    75% {
+        background: orange;
+        border: orange;
+    }
+    100% {
+        background-color: white;
+        border: white;
+    }
+}
+
+@keyframes bgcolorchange {
+    0% {
+        background-color: yellow;
+        border: yellow;
+    }
+    25% {
+        background-color: gold;
+        border: gold;
+    }
+    75% {
+        background-color: orange;
+        border: orange;
+    }
+    100% {
+        background-color: white;
+        border: white;
+    }
+}
